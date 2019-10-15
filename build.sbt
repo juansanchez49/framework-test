@@ -13,8 +13,6 @@ javacOptions in Compile ++= Seq("-source", "1.8")
 javacOptions in (Compile, compile) ++= Seq("-target", "1.8")
 
 resolvers in ThisBuild ++= Seq (
-  Resolver.sonatypeRepo("releases"),
-  Resolver.sonatypeRepo("snapshots"),
   Resolver.mavenLocal
 )
 

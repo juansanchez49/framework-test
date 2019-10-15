@@ -6,7 +6,7 @@ import com.typesafe.sbt.pgp.PgpKeys
 object Release {
   private val pathToPgpPassphrase = System.getProperty("user.home") + "/.sbt/gpg/passphrase"
 
-  lazy val disablePublish: Def.Setting[Boolean] = publishArtifact := false
+  lazy val disablePublish: Def.Setting[Boolean] = publishArtifact := true
 
   lazy val enableSignedRelease = Seq(
     releasePublishArtifactsAction := PgpKeys.publishSigned.value,
