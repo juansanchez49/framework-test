@@ -1,4 +1,4 @@
-import play.sbt.PlayImport.{cache, filters}
+import play.sbt.PlayImport.{cache, filters, guice}
 import sbt.Keys._
 import sbt._
 
@@ -46,7 +46,9 @@ object Dependencies {
   lazy val commonLib = Seq (
     libraryDependencies ++= Seq (
       filters,
+      guice,
       cache,
+      "org.yaml" % "snakeyaml" % "1.17",
       "commons-beanutils" % "commons-beanutils" % "1.9.2",
       "commons-io" % "commons-io" % "2.4"
     )
